@@ -74,11 +74,19 @@ function ContactForm({ onUserAdded, setRefresh, refresh }) {
         padding: "2rem",
         borderRadius: "12px",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-        width: "300px",
+        width: "100%",
+        maxWidth: "400px",
         margin: "1rem auto",
+        boxSizing: "border-box",
       }}
     >
-      <h2 style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+      <h2
+        style={{
+          textAlign: "center",
+          marginBottom: "1.5rem",
+          fontSize: "1.5rem",
+        }}
+      >
         Contact Form
       </h2>
 
@@ -109,7 +117,18 @@ function ContactForm({ onUserAdded, setRefresh, refresh }) {
         placeholder="Enter your phone number"
       />
 
-      {error && <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>}
+      {error && (
+        <p
+          style={{
+            color: "red",
+            marginBottom: "1rem",
+            fontSize: "0.9rem",
+            textAlign: "center",
+          }}
+        >
+          {error}
+        </p>
+      )}
 
       <button
         type="submit"
@@ -122,6 +141,7 @@ function ContactForm({ onUserAdded, setRefresh, refresh }) {
           borderRadius: "8px",
           cursor: "pointer",
           fontWeight: "bold",
+          fontSize: "1rem",
         }}
       >
         Submit

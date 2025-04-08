@@ -35,14 +35,16 @@ function UserDashboard() {
       style={{
         background: "linear-gradient(135deg, #e8f5e9, #f1f8e9)",
         minHeight: "100vh",
-        padding: "2rem",
+        padding: "2rem 1rem",
         fontFamily: "Arial, sans-serif",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <div
         style={{
+          width: "100%",
           maxWidth: "900px",
-          margin: "0 auto",
           backgroundColor: "#ffffff",
           padding: "2rem",
           borderRadius: "16px",
@@ -68,12 +70,26 @@ function UserDashboard() {
         />
 
         {fetchError && (
-          <p style={{ color: "red", textAlign: "center", marginTop: "1rem" }}>
+          <p
+            style={{
+              color: "red",
+              textAlign: "center",
+              marginTop: "1rem",
+              fontSize: "0.9rem",
+            }}
+          >
             {fetchError}
           </p>
         )}
 
-        <UserList users={users} />
+        <div
+          style={{
+            marginTop: "2rem",
+            overflowX: "auto",
+          }}
+        >
+          <UserList users={users} />
+        </div>
       </div>
     </div>
   );

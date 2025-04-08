@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
+import UserDashboard from "./UserDahboard";
 
+// App.js
 function App() {
-  return <div className="App"></div>;
+  return <UserDashboard />;
 }
 
 export default App;

@@ -40,13 +40,16 @@ function ContactForm({ onUserAdded, setRefresh, refresh }) {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/form/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://taskoraiyan.onrender.com/api/form/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await res.json();
 
